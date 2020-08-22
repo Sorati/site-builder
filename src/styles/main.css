@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+.select {
+    width: 100%;
+    position: relative;
+}
+.select.open .select__dropdown {
+    display: block;
+}
+.select.open .select__input {
+    border-bottom: none;
+}
+.select__input {
+    border: solid 1px #ccc;
+    border-radius: 5px;
+    height: 46px;
+    display: flex;
+    align-items: center;
+    padding: 0 1rem;
+}
+.select__dropdown {
+    display: none;
+    position: absolute;
+    border: solid 1px #ccc;
+    border-radius: 5px;
+    top: 46px;
+    left: 0;
+    right: 0;
+    max-height: 200px;
+    overflow-y: auto;
+    box-shadow: 2px 3px 5px rgba(0, 0, 0, .3);
+}
+
+/*****************************************/
+
+#app{
+    position: relative;
+}
+
+.content{
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 200px;
+
+}
+
+.sidebar{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 200px;
+    z-index: 100;
+    padding: 10px;
+    box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
+    overflow-y: auto;
+}
+
+/*
+
+$height: 46px;
+
+.select{
+    width: 100%;
+    position: relative;
+
+    &.open{
+        .select__dropdown{
+            display: block;
+        }
+        .select__input{
+            border-bottom:none;
+        }
+    }
+
+    &__input{
+        border: solid 1px #ccc;
+        border-radius: 5px;
+        height: $height;
+        display: flex;
+        align-items: center;
+        padding: 0 1rem;
+    }
+    &__dropdown{
+        display: none;
+        position: absolute;
+        border: solid 1px #ccc;
+        border-radius: 5px;
+        top: $height;
+        left: 0;
+        right: 0;
+        max-height: 200px;
+        overflow-y: auto;
+        box-shadow: 2px 3px 5px rgba(0,0,0,.3);
+    }
+}
+
+*/
